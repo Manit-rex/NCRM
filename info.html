@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insights and Attendance</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<style>
+    *{
+    font-size: 16px;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: url(crmbackground.png) no-repeat center center/cover;
+}
+
+.crmlogo{
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.navbar{
+    display: none;
+}
+
+.list-out{
+    display: flex;
+    background-color: #4486c2;
+    color: white;
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container-6{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+#sidebar {
+    width: 20%;
+    height: 100vh;
+    background: white;
+    /* text-align: center; */
+    cursor: pointer;
+}
+
+#sidebar a{
+    text-decoration: none;
+    color: black; 
+}
+
+.icons{
+    width: 30px;
+}
+
+.social img{
+    width: 30px;
+}
+
+#sidebar .crmlogo{
+    width: 100px;
+    height: 100px;
+    
+}
+
+.side {
+    padding: 15px;
+}
+
+#sidebar .side h2{
+    gap: 20px;
+    padding: 15px;
+}
+
+.log-btn{
+    padding: 5px;
+    margin-top: 15px;
+    color: white;
+    background-color: #2575fc;
+    border-radius: 8px;
+}
+
+.container-1{
+    width: 80%;
+}
+
+.smallcontainer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+    padding: 35px;
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.info1{
+    display: flex;
+    justify-content: space-around;
+}
+
+.twocard{
+    border-radius: 10px;
+    padding: 10px;
+    width: 350px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.cards-1{
+    border-radius: 10px;
+    padding: 10px;
+    width: 350px;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.twocards{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card-2{
+    display: grid;
+    grid-template-columns: auto auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    gap: 10px;
+    padding: 17px;
+}
+
+.next-btn{
+    background-color: #2575fc;
+    color: white;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 910px) and (max-width: 768px){
+    #sidebar{
+        display: none;
+    }
+
+    #date{
+        display: none;
+    }
+
+    .navbar{
+        display: unset;
+    }
+
+    .smallcontainer{
+        margin-top: 90px;
+    }
+
+    .twocards{
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 0px;
+    }
+
+    .twocard{
+        width: 200px;
+        height: fit-content;
+    }
+
+    .cards-1{
+        width: 200px;
+        height: fit-content;
+    }
+
+    .smallcontainer{
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+</style>
+<body>
+    
+    
+      <nav class="navbar bg-body-tertiary fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="crmlogo.png" alt="crmlogo" width="50px" height="45px"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img src="crmlogo.png" alt="crmlogo" width="100px"></h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Followup.html">Follow-Up</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="atten.html">Attendance</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="info.html">Info</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="work.html">Works</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="profile.html">Profile</a>
+                </li>
+
+                <div class="d-grid gap-2 d-md-block">
+                    <button class="btn btn-primary" type="button"><a href="index.html" style="color: white; text-decoration: none;">Logout</a></button>
+                </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    
+    <div class="container-6">
+        <aside id="sidebar">
+            <div class="side">
+                <img src="crmlogo.png" alt="logo crm" class="crmlogo">
+                <a href="home.html"><h5><img src="home.png" alt="home" class="icons">Home</h5></a><hr>
+                <a href="Followup.html"><h5><img src="followup.png" alt="follow" class="icons">Follow-Up</h5></a><hr>
+                <a href="atten.html"><h5><img src="attendance.png" alt="attendance" class="icons">Attendance</h5></a><hr>
+                <a href="info.html"><h5><img src="info.png" alt="info" class="icons">Info</h5></a><hr>
+                <a href="work.html"><h5><img src="work.png" alt="work" class="icons">Works</h5></a><hr>
+                <a href="profile.html"><h5><img src="profile.png" alt="profile" class="icons">Profile</h5></a><hr>
+            </div>
+            <div class="social">
+                <a href="#"><img src="facebook.png" alt="facebook"></a>
+                <a href="#"><img src="youtube.png" alt="youtube"></a>
+                <a href="#"><img src="priterest.png" alt="priterest"></a>
+                <a href="#"><img src="gmail.png" alt="gmail"></a>
+            </div>
+            <button class="log-btn"><a href="index.html">Logout</a></button>
+        </aside>
+
+        <div class="container-1">
+            <div class="smallcontainer">
+                <h2>Hi, NTechonologies</h2>
+                <h2>Ace</h2>
+            </div>
+
+            <div class="info1">
+                <h2>Info</h2>
+                <h3 id="date"></h3>
+            </div>
+
+            <div class="twocards">
+                <div class="twocard">
+                    <div class="cards">
+                        <h5 style="text-align: center;">Next FollowUp</h5>
+                        <hr>
+                        <div class="card-2">
+                            <h5>Name</h5>
+                            <button class="next-btn">Next</button>
+                            <h5>Time</h5>
+                            <button class="next-btn">finish</button>
+                        </div>
+                        <div class="card-2">
+                            <h5>Name</h5>
+                            <button class="next-btn">Next</button>
+                            <h5>Time</h5>
+                            <button class="next-btn">finish</button>
+                        </div>
+                        <div class="card-2">
+                            <h5>Name</h5>
+                            <button class="next-btn">Next</button>
+                            <h5>Time</h5>
+                            <button class="next-btn">finish</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards-1">
+                    <h5 style="text-align: center;">Next FollowUp</h5>
+                    <hr>
+                    <div class="card-2">
+                        <h5>Name</h5>
+                        <button class="next-btn">Next</button>
+                        <h5>Time</h5>
+                        <button class="next-btn">finish</button>
+                    </div>
+                    <div class="card-2">
+                        <h5>Name</h5>
+                        <button class="next-btn">Next</button>
+                        <h5>Time</h5>
+                        <button class="next-btn">finish</button>
+                    </div>
+                    <div class="card-2">
+                        <h5>Name</h5>
+                        <button class="next-btn">Next</button>
+                        <h5>Time</h5>
+                        <button class="next-btn">finish</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function updateTime(){
+            const now = new Date();
+            const date = now.getMonth();
+            const month = now.getMonth() + 1;
+            const year = now.getFullYear();
+            
+            document.getElementById("date").textContent = `Date: ${date}/${month}/${year}`;
+        }
+        setInterval(updateTime, 1000);
+
+        updateTime();
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+    

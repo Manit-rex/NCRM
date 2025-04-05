@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Home</title>
+</head>
+
+<style>
+*{
+    font-size: 16px;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+*{
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: url(crmbackground.png) no-repeat center center/cover;
+}
+
+.container{
+    background-color: white;
+    box-shadow: 0px 0px 3px black;
+}
+
+.datetime{
+    display: flex;
+    justify-content: space-around;
+}
+
+.profileimg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profileimg img{
+    border-radius: 60px;
+}
+
+.myname{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 200px;
+}
+
+.small{
+    text-align: center;
+    padding: 20px;
+}
+
+.btn{
+    padding: 20px;
+}
+
+.btn a{
+    text-decoration: none;
+    color: white;
+}
+
+button{
+    color: white;
+    padding: 13px;
+    border-radius: 5px;
+    width: 20%;
+    background-color: #2575fc;
+}
+
+.icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.icons img{
+    width: 70px;
+    border-radius: 80px;
+}
+
+@media screen and (max-width: 910px) and (max-width: 768px){
+    .icons{
+        gap: 0px;
+    }
+
+    .myname{
+        flex-direction: column;
+        align-items: start;
+        gap: 9px;
+        margin-left: 40px;
+    }
+
+    .btn button{
+        width: 100%;
+        gap: 20px;
+    }
+}
+
+</style>
+
+<body>
+    <div class="container">
+        <div class="maincon">
+            <div class="datetime">
+                <p id="date"></p>
+                <p id="clock"></p>
+            </div>
+            <div class="profileimg">
+                <img src="doom.jpg" alt="profile">
+            </div>
+            <div class="myname">
+                <p>Name</p>
+                <p>Position</p>
+            </div>
+            <div class="small">
+                <div class="btn">
+                    <button><a href="Followup.html">Followup</a></button>
+                    <button><a href="atten.html">Attendance</a></button>
+                </div>
+                <div class="btn">
+                    <button><a href="info.html">Info</a></button>
+                    <button><a href="work.html">Works</a></button>
+                </div>
+                <div class="btn">
+                    <button><a href="profile.html">profile</a></button>
+                    <button><a href="index.html">Logout</a></button>
+                </div>
+            </div>
+        </div>
+        <div class="icons">
+            <img src="facebook.png" alt="facebook">
+            <img src="priterest.png" alt="priterest">
+            <img src="youtube.png" alt="youtube">
+            <img src="gmail.png" alt="gmail">
+        </div>
+    </div>
+
+    <script>
+        function updateTime(){
+            const now = new Date();
+            const date = now.getMonth();
+            const month = now.getMonth() + 1;
+            const year = now.getFullYear();
+            const timeString = now.toLocaleTimeString();
+            document.getElementById("clock").textContent = timeString;
+            document.getElementById("date").textContent = `Date: ${date}/${month}/${year}`;
+        }
+        setInterval(updateTime, 1000);
+
+        updateTime();
+    </script>
+</body>
+</html>

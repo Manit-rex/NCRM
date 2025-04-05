@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insights and Attendance</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<style>
+	*{
+    font-size: 16px;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: url(crmbackground.png) no-repeat center center/cover;
+   
+}
+
+.crmlogo{
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.navbar{
+    display: none;
+}
+
+.container-6{
+    display: flex;
+    justify-content: center;
+}
+
+#sidebar {
+    width: 20%;
+    /* height: 100vh; */
+    background: white;
+    /* text-align: center; */
+    cursor: pointer;
+    padding: 40px 0px 35px;
+}
+
+#sidebar a{
+    text-decoration: none;
+    color: black; 
+}
+
+.social img{
+    width: 30px;
+}
+
+.icons{
+    width: 30px;
+}
+
+#sidebar .crmlogo{
+    width: 100px;
+    height: 100px;
+    
+}
+
+.side {
+    padding: 15px;
+}
+
+#sidebar .side h5{
+    gap: 10px;
+}
+
+.log-btn{
+    padding: 5px;
+    margin-top: 15px;
+    color: white;
+    background-color: #2575fc;
+    border-radius: 8px;
+}
+
+.log-btn a{
+    text-decoration: none;
+}
+
+.container-1{
+    flex: 1;
+    padding: 10px;
+}
+
+.insightcards{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+}
+
+.insightcard{
+    padding: 3px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.trade{
+    width: 30px;
+    border-radius: 10px;
+}
+
+.visual img{
+    width: 100px;
+}
+
+.ontime{
+    display: flex;
+    /* justify-content: start;
+    align-items: start;*/
+} 
+
+.percentage{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 5px;
+}
+
+.calender img{
+    width: 300px;
+}
+
+.container-3{
+    width: 80%;
+    gap: 20px;
+}
+
+.atten{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.inputbox{
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    padding: 3px;
+    gap: 10px;
+
+}
+
+.inputbox input{
+    border: none;
+} 
+
+.inputbox button{
+    width: 150px;
+    background-color: #2575fc;
+    color: white;
+    border-radius: 3px;
+}
+
+.container-4{
+    display: flex;
+}
+
+.timer img{
+    width: 100px;
+    
+    border-radius: 10px;
+}
+
+.tree img{
+    width: 100px;
+    border-radius: 20px;
+}
+
+.timer{
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    margin-left: 20px;
+}
+
+.container-5{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-left: 10px;
+}
+
+.workingHours{
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    margin-left: 100px;
+}
+
+.tree{
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 5px;
+    margin-left: 100px;
+}
+
+.punch-in button{
+    border-radius: 10px;
+    background-color: #2575fc;
+    color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    cursor: pointer;
+    margin-left: 100px;
+}
+
+@media screen and (max-width: 910px) and (max-width: 768px){
+    #date{
+        display: none;
+    }
+
+    .navbar{
+        display: unset;
+    }
+
+
+    #sidebar{
+        display: none;
+    }
+
+    .insightcards{
+        flex-direction: column;
+    }
+
+    .insightcard{
+        width: fit-content;
+        height: fit-content;
+    }
+
+    .container-4{
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container-5{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .container-1{
+        margin-top:30px;
+    }
+
+    .workingHours{
+        margin-left: 0;
+    }
+
+    .tree{
+        margin-left: 0;
+    }
+
+    .punch-in button{
+        margin-left: 0;
+    }
+}
+
+</style>
+<body>
+
+    <nav class="navbar bg-body-tertiary fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="crmlogo.png" alt="crmlogo" width="50px" height="45px"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img src="crmlogo.png" alt="crmlogo" width="100px"></h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Followup.html">Follow-Up</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="atten.html">Attendance</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="info.html">Info</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="work.html">Works</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="profile.html">Profile</a>
+                </li>
+
+                <div class="d-grid gap-2 d-md-block">
+                    <button class="btn btn-primary" type="button"><a href="index.html" style="color: white; text-decoration: none;">Logout</a></button>
+                </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    
+    <div class="container-6">
+        <aside id="sidebar">
+            <div class="side">
+                <img src="crmlogo.png" alt="logo crm" class="crmlogo">
+                <a href="home.html"><h5><img src="home.png" alt="home" class="icons">Home</h5></a><hr>
+                <a href="Followup.html"><h5><img src="followup.png" alt="follow" class="icons">Follow-Up</h5></a><hr>
+                <a href="atten.html"><h5><img src="attendance.png" alt="attendance" class="icons">Attendance</h5></a><hr>
+                <a href="info.html"><h5><img src="info.png" alt="info" class="icons">Info</h5></a><hr>
+                <a href="work.html"><h5><img src="work.png" alt="work" class="icons">Works</h5></a><hr>
+                <a href="profile.html"><h5><img src="profile.png" alt="profile" class="icons">Profile</h5></a><hr>
+            </div>
+            <div class="social">
+                <a href="#"><img src="facebook.png" alt="facebook"></a>
+                <a href="#"><img src="youtube.png" alt="youtube"></a>
+                <a href="#"><img src="priterest.png" alt="priterest"></a>
+                <a href="#"><img src="gmail.png" alt="gmail"></a>
+            </div>
+            <button class="log-btn"><a href="index.html">Logout</a></button>
+        </aside>
+
+        <div class="container-3">
+            <div class="container-1">
+                <h5 style="text-align: center; font-size: 16px;">Insights</h5>
+                <div class="insightcards">
+                    <div class="insightcard">
+                        <div class="ontime">
+                            <div class="late">
+                                <p>On Time Percentage</p>
+                                <p>February</p>
+                                <p>65%</p>
+                                <div class="visual">
+                                    <img src="visualgreen.png" alt="visual" >
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="percentage">
+                            <img src="tradeneg.gif" alt="trade" class="trade">
+                            <h6><span class="tradepos">-25%</span>Compared to January</h6>
+                        </div>
+                    </div>
+                    <div class="insightcard">
+                        <div class="ontime">
+                            <div class="late">
+                                <p>Late Percentage</p>
+                                <p>February</p>
+                                <p>35%</p>
+                                <div class="visual">
+                                    <img src="visualgreen.png" alt="visual" >
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="percentage">
+                            <img src="tradepos.gif" alt="trade" class="trade">
+                            <h6><span class="tradeneg">+35%</span>Compared to January</h6>
+                        </div>  
+                    </div>
+        
+                    <div class="insightcard">
+                        <div class="ontime">
+                            <div class="late">
+                                <p>Total Break Hoours <span>/February</span></p>
+                                <p>00 Hours</p>
+                                <p>40 Minutes</p>
+                                <p>55 Seconds</p>
+                                <div class="visual">
+                                    <img src="visualgreen.png" alt="visual" >
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="percentage">
+                            <img src="tradeneg.gif" alt="trade" class="trade">
+                            <h6><span class="tradepos">-13%</span>Compared to January</h6>
+                        </div>
+                    </div>
+    
+                    <div class="insightcard">
+                        <div class="ontime">
+                            <div class="late">
+                                <p>Total Working Hours <span>/ February</span></p>
+                                <p>00 Hours</p>
+                                <p>40 Minutes</p>
+                                <p>55 Seconds</p>
+                                <div class="visual">
+                                    <img src="visualgreen.png" alt="visual" >
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="percentage">
+                            <img src="tradepos.gif" alt="trade" class="trade">
+                            <h6><span class="tradeneg">+33%</span>Compared to January</h6>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+
+            <div class="atten">
+                <h2 style="font-size: 16px;">Attendance</h2>
+                <h3 id="date" style="font-size: 16px;"></h3>
+            </div>
+    
+    
+            
+            <div class="container-2">
+                <div class="inputbox">
+                    <input type="text" placeholder="Name">
+                    <input type="text" placeholder="Degree">
+                    <button>Submit</button>
+                </div>
+            </div>
+            <div class="container-4">
+                <div class="timer">
+                    <img src="clock.gif" alt="clock">
+                    <p id="clock"></p>
+                </div>
+                <div class="container-5">
+                    <div class="workingHours">
+                        <p>Working Hours</p>
+                        <p>00 Hr 00 Mins 00 Secs</p>
+                    </div>
+                    <div class="workingHours">
+                        <p>Breaking Hours</p>
+                        <p>00 Hr Mins 55 Secs</p>
+                    </div>
+                    <div class="tree">
+                        <img src="tree.gif" alt="tree">
+                        <p style="color: green;">Punctuality is the virtue of the board</p>
+                    </div>
+    
+                    <div class="punch-in">
+                        <button>Punch In </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function updateTime(){
+            const now = new Date();
+            const date = now.getMonth();
+            const month = now.getMonth() + 1;
+            const year = now.getFullYear();
+            const timeString = now.toLocaleTimeString();
+            document.getElementById("clock").textContent = timeString;
+            document.getElementById("date").textContent = `Date: ${date}/${month}/${year}`;
+        }
+        setInterval(updateTime, 1000);
+
+        updateTime();
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

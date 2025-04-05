@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N'CRM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<style>
+    *{
+    font-size: 16px;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body{
+    background: url(crmbackground.png) no-repeat center center/cover;
+}
+
+.container {
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dateofform{
+    margin-bottom: 200px;
+}
+
+.signupbox {
+    padding: 20px;
+    border-radius: 10px;
+    /* text-align: center; */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.signupbox h2{
+    font-size: 20px;
+}
+
+.crmlogo img{
+    width: 90px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.input-box {
+    position: relative;
+    margin: 10px 0;
+}
+
+.input-box img{
+    position: absolute;
+}
+
+.input-box input {
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+.boxgif{
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    
+}
+
+.boxgif{
+    width: 20px;
+    border-radius: 10px;
+}
+
+.sign-btn {
+    width: 240px;
+    padding: 5px;
+    background: #2575fc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+.sign-btn:hover {
+    background: white;
+    color: #2575fc;
+}
+
+@media screen and (max-width: 910px) and (max-width: 768px) {
+    *{
+        font-size: 12px;
+    }
+
+     .signupbox{
+        width: 100%;
+        padding: 10px 10px 10px;
+    } 
+
+    .signupbox h2{
+        font-size: 20px;
+    }
+
+    .input-box input{
+        width: 100%;
+        
+    }
+
+    .input-box img{
+        margin-left: 0px;
+    }
+
+    .sign-btn{
+        width: 170px;
+        font-size: 16px;
+    }
+}
+</style>
+<body>
+    
+    <div class="container">
+        <div class="signupbox">
+            <div class="crmlogo">
+                <img src="crmlogo.png" alt="ncrm">
+            </div>
+            <h2>SIGN UP</h2>
+            <form lass="dateofform">
+                <div class="input-box">
+                    <img src="username.gif" alt="user" class="boxgif">
+                    <input type="text" placeholder="Name" required>
+                </div>
+                <div class="input-box">
+                    <img src="mobile.gif" alt="mobile" class="boxgif">
+                    <input type="text" placeholder="Mobile No" required>
+                </div>
+                <div class="input-box">
+                    <img src="gmail.gif" alt="Gmail" class="boxgif">
+                    <input type="gmail" placeholder="Gmail" required>
+                </div>
+                <div class="input-box">
+                    <img src="pass.gif" alt="password" class="boxgif">
+                    <input type="password" placeholder="Password" required>
+                </div>
+                <div class="input-box">
+                    <img src="empid.gif" alt="empid" class="boxgif">
+                    <input type="text" placeholder="Emp Position" required>
+                </div>
+                <div class="input-box">
+                    <img src="address.gif" alt="Address" class="boxgif">
+                    <input type="text" placeholder="Address" required>
+                </div>
+                <div class="input-box">
+                    <label style="text-align: left;">Date of Joining</label>
+                    <input type="date"required>
+                </div>
+                <div class="input-box">
+                    <img src="pass.gif" alt="password" class="boxgif">
+                    <input type="password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="sign-btn">SIGN UP</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
